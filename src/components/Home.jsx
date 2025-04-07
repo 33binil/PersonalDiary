@@ -21,10 +21,10 @@ export default function HomePage() {
                     </h1>
 
                     <div className="mt-20 space-x-4">
-                        <button className="px-12 py-4 font-bold bg-black text-white rounded shadow transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                        <button className="text-[14px] md:text-[20px] px-12 py-4 font-bold bg-black text-white rounded shadow transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
                             Sign In
                         </button>
-                        <button className="px-12 py-4 font-bold bg-white text-black rounded shadow transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                        <button className="text-[14px] md:text-[20px] px-12 py-4 font-bold bg-white text-black rounded shadow transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
                             Sign Up
                         </button>
                     </div>
@@ -71,18 +71,19 @@ export default function HomePage() {
             </div>
 
             {/* Footer */}
-            <footer className="bg-black text-white py-4 text-center flex flex-col md:flex-row justify-center items-center gap-20">
-                <a href="#" className="hover:underline">
+            <footer className="bg-black text-white py-4 text-center flex flex-col md:flex-row justify-center items-center gap-2 md:gap-20">
+            <a href="#" className="hover:underline">
                     About
                 </a>
-                <span>|</span>
+                <span className="hidden md:inline">|</span>
                 <a href="#" className="hover:underline">
                     Privacy
                 </a>
-                <span>|</span>
+                <span className="hidden md:inline">|</span>
                 <a href="#" className="hover:underline">
                     Contact
                 </a>
+
             </footer>
         </div>
     );
