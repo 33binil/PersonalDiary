@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #f3f4f6;
+    color: #111827;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('/your-background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-buttons button {
+    padding: 0.5rem 1.5rem;
+    margin: 0.5rem;
+    font-weight: bold;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.hero-buttons .signin {
+    background-color: #000;
+    color: #fff;
+}
+
+.hero-buttons .signup {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Description Section */
+.description {
+    background: #fff;
+    padding: 2rem;
+    margin: -4rem 1rem 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    text-align: center;
+    z-index: 10;
+    position: relative;
+}
+
+.description h2 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* Features */
+.features {
+    padding: 4rem 1rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.features h3 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.feature-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.feature-item-icon {
+    font-size: 2rem;
+}
+
+/* CTA */
+.cta {
+    text-align: center;
+    background-color: #e5e7eb;
+    padding: 3rem 1rem;
+}
+
+.cta h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.cta button {
+    padding: 0.75rem 2rem;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background: #000;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@font-face {
+    font-family: 'rockybilly';
+    src: url('./fonts/Rockybilly.ttf') format('truetype');
+}
+
+.handwritten-text {
+    font-family: 'rockybilly', cursive;
+}
+
+@font-face {
+    font-family: 'rockybilly';
+    src: url('./fonts/Piedra-Regular.otf') format('truetype');
+}
+
+.written-text {
+    font-family: 'Piedra', cursive;
+}
