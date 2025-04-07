@@ -1,4 +1,7 @@
 import React from "react";
+import "../styles/fadeUp.css";
+import { motion } from "framer-motion";
+
 
 export default function HomePage() {
     return (
@@ -16,11 +19,11 @@ export default function HomePage() {
 
                 {/* Content */}
                 <div className="relative z-10">
-                    <h1 className="text-5xl md:text-9xl italic text-white drop-shadow-md written-text">
+                    <h1 className="fade-up text-5xl md:text-9xl italic text-white drop-shadow-md written-text">
                         Personal Diary
                     </h1>
 
-                    <div className="mt-20 space-x-4">
+                    <div className="fade-up mt-20 space-x-4 delay-200">
                         <button className="text-[14px] md:text-[20px] px-12 py-4 font-bold bg-black text-white rounded shadow transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
                             Sign In
                         </button>
@@ -28,24 +31,38 @@ export default function HomePage() {
                             Sign Up
                         </button>
                     </div>
-
                 </div>
             </div>
 
 
             {/* Tagline & Description */}
             <div className="bg-white py-20 px-6 md:px-20 text-center shadow-xl -mt-16 mx-4 rounded-lg relative z-10 handwritten-text">
-                <h2 className="text-2xl md:text-6xl font-bold mb-4">
+                <motion.h2
+                    className="text-2xl md:text-6xl font-bold mb-4"
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    transition={{ duration: 0.8 }}
+                    viewport={{ once: false, amount: 0.5 }}
+                >
                     “No pen. No rules. Just you and your moments.”
-                </h2>
-                <p className="text-1xl md:text-2xl text-gray-700 max-w-5xl mx-auto handwritten-text">
+                </motion.h2>
+
+                <motion.p
+                    className="text-[16px] md:text-[20px] text-gray-700 max-w-5xl mx-auto handwritten-text"
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    transition={{ duration: 1, delay: 0.3 }}
+                    viewport={{ once: false, amount: 0.5 }}
+                >
                     A modern diary built for the way we live today. Record your thoughts,
                     feelings, and memories through voice, text, or photos — anytime,
                     anywhere. This is your private space to reflect, heal, and grow —
                     without judgment, without pressure. Just you, your story, and a safe
                     place to be real.
-                </p>
+                </motion.p>
+
             </div>
+
 
             {/* Features Section */}
             <section className="py-24 px-6 md:px-20">
