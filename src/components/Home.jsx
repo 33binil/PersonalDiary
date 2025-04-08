@@ -24,10 +24,10 @@ export default function HomePage() {
                     </h1>
 
                     <div className="fade-up mt-20 space-x-4 delay-200">
-                        <button className="text-[14px] md:text-[20px] px-12 py-4 font-bold bg-black text-white rounded shadow transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                        <button className="text-[14px] md:text-[20px] px-12 py-4 font-bold bg-black text-white rounded-2xl shadow transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
                             Sign In
                         </button>
-                        <button className="text-[14px] md:text-[20px] px-12 py-4 font-bold bg-white text-black rounded shadow transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                        <button className="text-[14px] md:text-[20px] px-12 py-4 font-bold bg-white text-black rounded-2xl shadow transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
                             Sign Up
                         </button>
                     </div>
@@ -36,8 +36,9 @@ export default function HomePage() {
 
 
             {/* Tagline & Description */}
-            <div className="bg-white py-20 px-6 md:px-20 text-center shadow-xl -mt-16 mx-4 rounded-lg relative z-10 handwritten-text">
-                <motion.h2
+            <div className="bg-white py-16 px-4 md:px-32 text-center shadow-xl -mt-16 mx-auto max-w-6xl rounded-2xl relative z-10 handwritten-text">
+
+            <motion.h2
                     className="text-2xl md:text-6xl font-bold mb-4"
                     initial={{ scale: 0.8, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
@@ -77,6 +78,7 @@ export default function HomePage() {
                 </div>
             </section>
 
+
             {/* Call to Action */}
             <div className="py-24 text-center bg-gray-200 py-12">
                 <h4 className="text-2xl md:text-5xl font-bold mb-4 handwritten-text">
@@ -108,12 +110,17 @@ export default function HomePage() {
 
 function FeatureItem({ title, desc, icon }) {
     return (
-        <div className="flex items-start gap-8">
-            <div className="text-3xl">{icon}</div>
-            <div>
-                <h4 className="text-xl md:text-2xl  mb-2">{title}</h4>
-                <p className="text-gray-700 text-sm">{desc}</p>
-            </div>
-        </div>
+        <motion.div
+            className="flex flex-col items-center text-center"
+            initial={{ scale: 0.8, opacity: 0 }}
+            whileInView={{ scale: 1.1, opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: false, amount: 0.4 }}
+        >
+            <div className="text-5xl mb-4">{icon}</div>
+            <h4 className="text-xl md:text-2xl font-semibold mb-2">{title}</h4>
+            <p className="text-gray-700 text-sm max-w-xs">{desc}</p>
+        </motion.div>
     );
 }
+
