@@ -3,10 +3,8 @@ import { useNavigate } from "react-router-dom";
 
 export default function RegisterMessage() {
     const navigate = useNavigate();
-
     return (
-        <div
-            className="min-h-screen flex items-center justify-center bg-cover bg-center px-4 relative"
+        <div className="min-h-screen flex items-center justify-center bg-cover bg-center px-4 relative"
             style={{
                 backgroundImage: "url('/img/Home.jpg')",
             }}
@@ -21,7 +19,7 @@ export default function RegisterMessage() {
 
                 {/* Subtext + Button */}
                 <div>
-                    <p className="text-l md:text-xl mt-14 text-lg md:text-xl opacity-80">
+                    <p className="text-l md:text-xl mt-14 text-lg opacity-80">
                         Your journey starts here...
                     </p>
                     <button

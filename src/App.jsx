@@ -4,7 +4,7 @@ import HomePage from "./components/Home";
 import Loader from "./components/Loader";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import RegisterMessage from "./pages/RegisterMessage";
+import RegisterMessage from "./pages/Registermessage.jsx";
 import Dashboard from "./pages/Dashboard";
 
 function App() {
