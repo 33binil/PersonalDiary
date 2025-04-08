@@ -81,13 +81,13 @@ export default function HomePage() {
             </section>
 
             {/* Call to Action */}
-            <div className="py-24 text-center bg-gray-200 py-12">
+            <div className="py-24 text-center bg-gray-200 ">
                 <h4 className="text-2xl md:text-5xl font-bold mb-4 handwritten-text">
                     “Ready to keep your first memory?”
                 </h4>
                 <button
                     onClick={() => navigate("/Register")}
-                    className="px-6 py-3 written-text bg-black text-white rounded shadow rounded shadow transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                    className="px-6 py-3 written-text bg-black text-white rounded shadow transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
                     Start Your Journey
                 </button>
             </div>
