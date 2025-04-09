@@ -39,7 +39,7 @@ export default function Dashboard() {
                     </h2>
 
                     {/* Description */}
-                    <p className="text-sm md:text-base text-gray-300 font-sans font-serif">
+                    <p className="text-sm md:text-base text-gray-300 font-sans">
                         What Happens Today..........
                     </p>
                 </div>

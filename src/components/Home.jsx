@@ -1,9 +1,13 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/fadeUp.css";
-import { motion } from "framer-motion";
+import useFadeUp from "../hooks/useFadeUp.js";
+import useFadeZoom from "../hooks/useFadeZoom";
+import "../styles/fadeZoom.css";
 
 export default function HomePage() {
+    useFadeZoom();
+    useFadeUp();
     const navigate = useNavigate();
 
     return (
@@ -15,10 +19,8 @@ export default function HomePage() {
                     backgroundImage: "url('/img/Home.jpg')",
                 }}
             >
-                {/* Black Overlay */}
                 <div className="absolute inset-0 bg-black opacity-70 z-0"></div>
 
-                {/* Content */}
                 <div className="relative z-10">
                     <h1 className="fade-up text-5xl md:text-9xl italic text-white drop-shadow-md written-text">
                         Personal Diary
@@ -33,7 +35,8 @@ export default function HomePage() {
                         </button>
                         <button
                             onClick={() => navigate("/Register")}
-                            className="text-[14px] md:text-[20px] px-12 py-4 font-bold bg-white text-black rounded shadow transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                            className="text-[14px] md:text-[20px] px-12 py-4 font-bold bg-white text-black rounded shadow transform transition-transform duration-300 hover:scale-105 hover:shadow-xl"
+                        >
                             Sign Up
                         </button>
                     </div>
@@ -42,34 +45,24 @@ export default function HomePage() {
 
             {/* Tagline & Description */}
             <div className="bg-white py-20 px-6 md:px-20 text-center shadow-xl -mt-16 mx-4 rounded-lg relative z-10 handwritten-text">
-                <motion.h2
-                    className="text-2xl md:text-6xl font-bold mb-4"
-                    initial={{ scale: 0.8, opacity: 0 }}
-                    whileInView={{ scale: 1, opacity: 1 }}
-                    transition={{ duration: 0.8 }}
-                    viewport={{ once: false, amount: 0.5 }}
-                >
+                <h2 className="fade-zoom text-3xl md:text-6xl font-bold mb-4">
                     “No pen. No rules. Just you and your moments.”
-                </motion.h2>
+                </h2>
 
-                <motion.p
-                    className="text-[16px] md:text-[20px] text-gray-700 max-w-5xl mx-auto handwritten-text"
-                    initial={{ scale: 0.8, opacity: 0 }}
-                    whileInView={{ scale: 1, opacity: 1 }}
-                    transition={{ duration: 1, delay: 0.3 }}
-                    viewport={{ once: false, amount: 0.5 }}
-                >
+                <p className="fade-zoom text-[16px] md:text-[20px] text-gray-700 max-w-5xl mx-auto handwritten-text">
                     A modern diary built for the way we live today. Record your thoughts,
                     feelings, and memories through voice, text, or photos — anytime,
                     anywhere. This is your private space to reflect, heal, and grow —
                     without judgment, without pressure. Just you, your story, and a safe
                     place to be real.
-                </motion.p>
+                </p>
             </div>
 
             {/* Features Section */}
             <section className="py-24 px-6 md:px-20">
-                <h3 className="text-4xl md:text-5xl font-bold text-center mb-24 handwritten-text">Features</h3>
+                <h3 className="text-4xl md:text-5xl font-bold text-center mb-24 handwritten-text fade-up">
+                    Features
+                </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-20 handwritten-text">
                     <FeatureItem title="Text Notes" desc="Prefer typing? You’ve got that too...  Add a title, write your heart out, save it." icon="📝" />
                     <FeatureItem title="Voice Entries" desc="Just press record and speak...  Save thoughts without typing a word." icon="🎙️" />
@@ -106,16 +99,10 @@ export default function HomePage() {
 
 function FeatureItem({ title, desc, icon }) {
     return (
-        <motion.div
-            className="flex flex-col items-center text-center"
-            initial={{ scale: 0.8, opacity: 0 }}
-            whileInView={{ scale: 1.1, opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: false, amount: 0.4 }}
-        >
+        <div className="fade-zoom flex flex-col items-center text-center">
             <div className="text-4xl mb-4">{icon}</div>
             <h4 className="text-xl md:text-2xl font-semibold mb-2">{title}</h4>
             <p className="text-gray-700 text-sm max-w-xs">{desc}</p>
-        </motion.div>
+        </div>
     );
 }
