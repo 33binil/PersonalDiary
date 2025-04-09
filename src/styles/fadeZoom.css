@@ -16,3 +16,20 @@
         transition: transform 0.8s ease-out, opacity 0.8s ease-out;
     }
 }
+
+/* fadeZoom.css */
+
+@keyframes zoomInFade {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.zoom-in-on-load {
+    animation: zoomInFade 0.8s ease-out forwards;
+}

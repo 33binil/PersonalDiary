@@ -1,4 +1,8 @@
 import React from "react";
+import "../styles/fadeUp.css";
+import { IoMdAddCircleOutline } from "react-icons/io";
+import { IoCalendarNumber } from "react-icons/io5";
+import { IoIosContact } from "react-icons/io";
 
 export default function Dashboard() {
     return (
@@ -29,29 +33,36 @@ export default function Dashboard() {
                 {/* Box below h1 */}
                 <div className="bg-[#001433] text-white rounded-xl p-6 md:p-8 shadow-xl max-w mx-auto my-6 font-sans">
                     {/* Date */}
-                    <p className="text-xl md:text-2xl font-bold handwritten-text">
+                    <p className="fade-up text-xl md:text-2xl font-bold handwritten-text">
                         07 <span className="text-sm font-light">April</span>
                     </p>
 
                     {/* Title */}
-                    <h2 className="text-2xl md:text-3xl mt-2 mb-2 font-bold handwritten-text">
+                    <h2 className="fade-up text-2xl md:text-3xl mt-2 mb-2 font-bold handwritten-text">
                         Best Moment !
                     </h2>
 
                     {/* Description */}
-                    <p className="text-sm md:text-base text-gray-300 font-sans">
+                    <p className="fade-up text-sm md:text-base text-gray-300 font-sans">
                         What Happens Today..........
                     </p>
                 </div>
                 <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex items-center gap-[90px] z-50">
                     {/* Left small circle */}
-                    <div className="w-[50px] h-[50px] bg-[#011B43] opacity-70 rounded-full"></div>
+                    <div className="w-[50px] h-[50px] bg-[#011B43] opacity-70 rounded-full flex items-center justify-center text-white text-xl">
+                        <IoCalendarNumber />
+                    </div>
 
                     {/* Center large circle */}
-                    <div className="w-[70px] h-[70px] bg-[#011B43] rounded-full"></div>
+                    <div className="w-[70px] h-[70px] bg-[#011B43] rounded-full flex items-center justify-center text-white text-5xl">
+                        <IoMdAddCircleOutline />
+                    </div>
+
 
                     {/* Right small circle */}
-                    <div className="w-[50px] h-[50px] bg-[#011B43] opacity-70 rounded-full"></div>
+                    <div className="w-[50px] h-[50px] bg-[#011B43] opacity-70 rounded-full flex items-center justify-center text-white text-xl">
+                        <IoIosContact />
+                    </div>
                 </div>
                 {/* Bottom black fade overlay */}
                 <div className="absolute bottom-0 left-0 w-full h-36 bg-gradient-to-t from-black to-transparent z-30 pointer-events-none"></div>

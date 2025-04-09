@@ -12,6 +12,15 @@ export default function HomePage() {
 
     return (
         <div className="font-sans bg-gray-100 text-black">
+            {/* Logo at top center */}
+            <div className="absolute top-6 w-full flex justify-center z-10">
+                <img
+                    src="/img/logo.png"
+                    alt="Logo"
+                    className="h-12 md:h-16 object-contain"
+                />
+            </div>
+
             {/* Hero Section */}
             <div
                 className="relative bg-cover bg-center h-screen flex flex-col items-center justify-center text-center px-4"

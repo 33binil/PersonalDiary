@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import "../styles/fadeUp.css";
 
 export default function RegisterMessage() {
     const navigate = useNavigate();
@@ -11,7 +12,7 @@ export default function RegisterMessage() {
         >
             <div className="absolute inset-0 bg-black bg-opacity-70 z-0"></div>
 
-            <div className="relative z-10 text-center text-white px-6">
+            <div className="fade-up relative z-10 text-center text-white px-6">
                 {/* Main Message */}
                 <h1 className="text-4xl md:text-6xl font-bold handwritten-text drop-shadow-lg mb-6">
                     Keep a Diary,<br /> and Someday it’ll <br />Keep You..

@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import "../styles/fadeZoom.css";
 
 export default function Login() {
     const navigate = useNavigate();
@@ -16,7 +17,7 @@ export default function Login() {
 
                 {/* Content - z-10 ensures it appears above overlay */}
                 <div
-                    className="relative z-10 bg-white/30 backdrop-blur-md p-10 rounded-2xl shadow-2xl w-full max-w-5xl text-left border border-white/50"
+                    className="zoom-in-on-load relative z-10 bg-white/30 backdrop-blur-md p-10 rounded-2xl shadow-2xl w-full max-w-5xl text-left border border-white/50"
                 >
                     <h2 className="text-3xl md:text-5xl font-bold mb-6 text-center text-black handwritten-text">Your space is waiting. Ready to step in?</h2>
                     <form className="space-y-4">

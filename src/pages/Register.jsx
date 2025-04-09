@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import "../styles/fadeZoom.css";
 
 export default function Register() {
     const navigate = useNavigate();
@@ -16,7 +17,7 @@ export default function Register() {
 
                 {/* Form Card */}
                 <div
-                    className="relative z-10 bg-white/30 backdrop-blur-md p-10 rounded-2xl shadow-2xl w-full max-w-5xl text-left border border-white/50"
+                    className="zoom-in-on-load relative z-10 bg-white/30 backdrop-blur-md p-10 rounded-2xl shadow-2xl w-full max-w-5xl text-left border border-white/50"
                 >
                     <h2 className="text-3xl md:text-5xl font-bold mb-6 text-center text-black handwritten-text">Just you, your space, and your memories — let’s begin.</h2>
                     <form className="space-y-4">
